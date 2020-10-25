@@ -8,7 +8,7 @@
 }
 
 .max-width{
-    max-width: 1300px;
+    max-width: 1600px;
     padding: 0 80px;
     margin: auto;
 }
@@ -73,7 +73,7 @@
 /* Home section styling */
 .home{
     display: flex;
-    background: url("../images/img_1-pt.jpg") no-repeat center;
+    background: url("../images/img_1-pt2.jpg") no-repeat center;
     height: 100vh;
     color: #fff;
     min-height: 500px;
@@ -106,6 +106,14 @@ margin: auto 0 auto 40px;
 
 
 /* responsive media query start */
+
+
+@media (max-width:  1320px){
+    .home .max-width{
+        margin-left: 0px;
+    }
+}
+
 @media (max-width:  1000px){
     .max-width{
         padding: 0 50px;
@@ -144,5 +152,38 @@ margin: auto 0 auto 40px;
         display: inline-block;
         margin: 20px 0;
         font-size: 25px;
+    }
+
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+}
+
+@media (max-width:  690px){
+    .max-width{
+        padding: 0 23px;
+    }
+
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+}
+
+@media (max-width:  450px){
+
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    
+    .home .home-content .text-3{
+        font-size: 27px;
     }
 }
