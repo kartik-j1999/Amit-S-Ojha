@@ -72,10 +72,12 @@
 /* Home section styling */
 .home {
   display: flex;
-  background: url("../images/img_1-pt2.jpg") no-repeat center;
+  background: url("../images/img_1-pt.jpg") no-repeat center;
   height: 100vh;
   color: #fff;
   min-height: 500px;
+  background-size: cover;
+  background-attachment: fixed;
   font-family: "ubuntu", sans-serif;
 }
 
@@ -126,12 +128,15 @@ section {
   padding: 100px 0;
 }
 
+.about, .services, .teams{
+  font-family: "Poppins", sans-serif;
+}
+
 section .title {
   position: relative;
   text-align: center;
   font-size: 40px;
   font-weight: 500;
-  color: #05052a;
   margin-bottom: 60px;
   padding-bottom: 20px;
   font-family: "Ubuntu", sans-serif;
@@ -139,7 +144,7 @@ section .title {
 section .title::before {
   content: "";
   position: absolute;
-  bottom: 0px;
+  bottom: 3px;
   left: 50%;
   width: 180px;
   height: 3px;
@@ -158,16 +163,6 @@ section .title::after {
   transform: translateX(-50%);
 }
 
-/* about section styling */
-
-.about, .services{
-  font-family: "Poppins", sans-serif;
-}
-
-.about .title::after{
-  content:"Who I am";
-}
-
 .about .about-content,
 .services .serv-content{
   display: flex;
@@ -175,6 +170,16 @@ section .title::after {
   align-items: center;
   justify-content: space-between;
 }
+
+/* about section styling */
+.about .title{
+  color: #05052a;
+}
+
+.about .title::after{
+  content:"Who I am";
+}
+
 
 .about .about-content .left {
   width: 45%;
@@ -224,7 +229,7 @@ section .title::after {
 }
 
 /* services styling start */
-.services{
+.services, .teams{
   color: #fff;
   background: #05052a;
 }
@@ -233,11 +238,13 @@ section .title::after {
   color: #fff;
 }
 
-.services .title::before{
+.services .title::before,
+.teams .title::before{
   background: #fff;
 }
 
-.services .title::after{
+.services .title::after,
+.teams .title::after{
   background: #05052a;
   content: "What I provide";
 }
@@ -278,6 +285,74 @@ section .title::after {
   font-weight: 500;
   margin: 10px 0 7px 0;
 }
+
+/* teams section styling */
+.teams .title::after{
+  content: "What I Know";
+}
+.teams .carousel .card{
+  background: #10104f;
+  border-radius: 6px;
+  padding: 25px 35px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.teams .carousel .card:hover{
+  background: crimson;
+}
+.teams .carousel .card .box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.teams .carousel .card:hover .box{
+  transform: scale(1.05);
+}
+.teams .carousel .card .text{
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+  color: crimson;
+}
+.teams .carousel .card:hover .text{
+  color: #fff;
+}
+.teams .carousel .card img{
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid crimson;
+  transition: all 0.3s ease;
+
+}
+.teams .carousel .card:hover img{
+  border-color: #fff;
+}
+.owl-dots{
+  text-align: center;
+  margin-top: 20px;
+}
+.owl-dot{
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  outline: none!important;
+  border-radius: 50%;
+  border: 2px solid crimson!important;
+  transition: all 0.3s ease;
+}
+.owl-dot.active{
+  width: 35px;
+  border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover{
+  background: crimson!important;
+}
+
 
 /* responsive media query start */
 
